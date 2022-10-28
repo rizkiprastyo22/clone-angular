@@ -1,4 +1,5 @@
 import { EventEmitter } from "@angular/core";
+import { Ingredient } from "../shared/ingredients.model";
 import { Recipe } from "./recipe.model";
 
 export class RecipeService {
@@ -8,8 +9,20 @@ export class RecipeService {
 
   // buat instance
   private recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is a Simple Test', 'https://www.seriouseats.com/thmb/K40kegtcsC9WbzOCvogu-sjU79k=/1500x1125/filters:fill(auto,1)/butter-basted-pan-seared-steaks-recipe-hero-06-03b1131c58524be2bd6c9851a2fbdbc3.jpg'),
-    new Recipe('Another Recipe', 'This is another recipe', 'https://www.gourmetcaterers.com/wp-content/uploads/2020/02/021420-351-scaled.jpg?x46180')
+    new Recipe('A Test Recipe',
+      'This is a Simple Test',
+      'https://www.seriouseats.com/thmb/K40kegtcsC9WbzOCvogu-sjU79k=/1500x1125/filters:fill(auto,1)/butter-basted-pan-seared-steaks-recipe-hero-06-03b1131c58524be2bd6c9851a2fbdbc3.jpg',
+      [
+        new Ingredient('Meat', 1),
+        new Ingredient('Tomatoes', 1),
+      ]),
+    new Recipe('Another Recipe',
+      'This is another recipe',
+      'https://www.gourmetcaterers.com/wp-content/uploads/2020/02/021420-351-scaled.jpg?x46180',
+      [
+        new Ingredient('Tomatoes', 1),
+        new Ingredient('Meat', 1),
+      ])
   ];
 
   // ambil data instance
