@@ -7,6 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
 
+  // buat fitur routing
   @Output() featureSelect = new EventEmitter<string>();
 
   onSelect(feature:string){
